@@ -1,0 +1,3 @@
+rootProject.name = 'arvsrt'
+
+include ':app'
