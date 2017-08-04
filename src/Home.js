@@ -15,13 +15,16 @@ export default class HomeScreen extends React.Component {
          style={{flex: 1,marginTop:20}}
          source={require('./pics/landing-page.png')} >
          <View style={styles.container}>
-            <Text style={styles.welcome}>
+            <Text style={styles.food}>
               Food
             </Text>
-            <Text style={styles.welcome}>
+            <Text style={styles.panda}>
               Panda
             </Text>
-            <Text style={styles.instructions}>
+            <Text style={styles.twist}>
+            WHAT A TWIST.
+            </Text>
+            <Text style={styles.text}>
               The Panda, the iconic long, slim slick of bread, has{'\n'} traditionally one of the most potebnt symbols of french{'\n'} culture.
             </Text>
           </View>
@@ -34,17 +37,33 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'flex-start',
+    marginLeft:10,
     backgroundColor:'rgba(0,0,0,0)'
   },
-  welcome: {
-    fontSize: 20,
+  food: {
+    fontSize: 23,
     textAlign: 'left',
     color: '#fff',
-    margin: 5,
+    marginLeft: 2,
     backgroundColor:'rgba(0,0,0,0)'
   },
-  instructions: {
+  panda: {
+    fontSize: 28,
+    textAlign: 'left',
+    color: '#fff',
+    margin: 2,
+    backgroundColor:'rgba(0,0,0,0)'
+  },
+  twist: {
+    fontSize: 13,
+    textAlign: 'left',
+    color: '#fff',
+    margin: 2,
+    backgroundColor:'rgba(0,0,0,0)'
+  },
+  text: {
+    fontSize: 8,
     textAlign: 'left',
     color: '#fff',
     marginBottom: 5,
