@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import {
-  AppRegistry,StyleSheet,Text,View,ImageBackground
+  AppRegistry,StyleSheet,Text,View,ImageBackground,Image,TouchableOpacity
 } from 'react-native';
 
 
@@ -28,6 +28,38 @@ export default class HomeScreen extends React.Component {
               The Panda, the iconic long, slim slick of bread, has{'\n'} traditionally one of the most potebnt symbols of french{'\n'} culture.
             </Text>
           </View>
+          <View style={styles.footer}>
+            <TouchableOpacity style={styles.logo}>
+              <Image
+                style={styles.fImage}
+                source={require('./pics/Logo.jpg')}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity style={[styles.fItem,styles.selected]}>
+              <Image
+                style={styles.fImage}
+                source={require('./pics/HomeN.png')}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.fItem}>
+              <Image
+                style={styles.fImage}
+                source={require('./pics/MenuN.png')}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.fItem}>
+              <Image
+                style={styles.fImage}
+                source={require('./pics/OrderN.png')}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.fItem}>
+              <Image
+                style={styles.fImage}
+                source={require('./pics/NotifyN.png')}
+              />
+            </TouchableOpacity>
+          </View>
        </ImageBackground>
     );
   }
@@ -38,37 +70,66 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'flex-start',
-    marginLeft:10,
+    marginLeft:25,
     backgroundColor:'rgba(0,0,0,0)'
   },
   food: {
-    fontSize: 23,
+    fontFamily:'Georgia-Bold',
+    fontSize: 26,
     textAlign: 'left',
     color: '#fff',
-    marginLeft: 2,
+    lineHeight:26,
     backgroundColor:'rgba(0,0,0,0)'
   },
   panda: {
-    fontSize: 28,
+    fontFamily:'Georgia',
+    fontSize: 33,
     textAlign: 'left',
     color: '#fff',
-    margin: 2,
+    marginBottom:6,
+    lineHeight:33,
     backgroundColor:'rgba(0,0,0,0)'
   },
   twist: {
+    fontFamily:'Helvetica-Bold',
     fontSize: 13,
     textAlign: 'left',
     color: '#fff',
-    margin: 2,
+    marginBottom:4,
     backgroundColor:'rgba(0,0,0,0)'
   },
   text: {
-    fontSize: 8,
+    fontFamily:'Helvetica',
+    fontSize: 10,
     textAlign: 'left',
     color: '#fff',
     marginBottom: 5,
     backgroundColor:'rgba(0,0,0,0)'
   },
+  footer:{
+    bottom:0,
+    height:30,
+    backgroundColor:"#fff",
+    flexDirection:"row"
+  },
+  logo:{
+    justifyContent: 'center',
+    alignItems:"center",
+    paddingHorizontal:10
+  },
+  fItem:{
+    flex: 1,
+    justifyContent: 'center',
+    alignItems:"center",
+    paddingHorizontal:10
+  },
+  fImage:{
+    height:25,
+    resizeMode:"contain"
+  },
+  selected:{
+    backgroundColor:"#f57c00"
+  }
 });
 
 // AppRegistry.registerComponent('arvsrt', () => arvsrt);
