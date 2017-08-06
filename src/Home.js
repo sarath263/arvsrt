@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import {
-  AppRegistry,StyleSheet,Text,View,ImageBackground,Image,TouchableOpacity
+  AppRegistry,StyleSheet,Text,View,ImageBackground,Image,TouchableOpacity,Platform
 } from 'react-native';
 
 
@@ -12,7 +12,7 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <ImageBackground
-         style={{flex: 1,marginTop:20}}
+         style={{flex: 1,marginTop:(Platform.OS === 'ios') ? 20 : 0}}
          source={require('./pics/landing-page.png')} >
          <View style={styles.container}>
             <Text style={styles.food}>
