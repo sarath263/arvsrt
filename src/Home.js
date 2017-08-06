@@ -1,15 +1,13 @@
-
 import React, { Component } from 'react';
-import {
-  AppRegistry,StyleSheet,Text,View,ImageBackground,Image,TouchableOpacity,Platform
-} from 'react-native';
-
+import {AppRegistry,StyleSheet,Text,View,ImageBackground,Image,TouchableOpacity,Platform} from 'react-native';
+import { styles } from './common/styles';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     title: 'Welcome', header: null
   };
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <ImageBackground
          style={{flex: 1,marginTop:(Platform.OS === 'ios') ? 20 : 0}}
@@ -41,10 +39,10 @@ export default class HomeScreen extends React.Component {
                 source={require('./pics/HomeN.png')}
               />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.fItem}>
+            <TouchableOpacity style={styles.fItem} onPress={() => navigate('Menu')}>
               <Image
                 style={styles.fImage}
-                source={require('./pics/MenuN.png')}
+                source={require('./pics/MenuG.png')}
               />
             </TouchableOpacity>
             <TouchableOpacity style={styles.fItem}>
@@ -64,72 +62,3 @@ export default class HomeScreen extends React.Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'flex-start',
-    marginLeft:25,
-    backgroundColor:'rgba(0,0,0,0)'
-  },
-  food: {
-    fontFamily:'Georgia-Bold',
-    fontSize: 26,
-    textAlign: 'left',
-    color: '#fff',
-    lineHeight:26,
-    backgroundColor:'rgba(0,0,0,0)'
-  },
-  panda: {
-    fontFamily:'Georgia',
-    fontSize: 33,
-    textAlign: 'left',
-    color: '#fff',
-    marginBottom:6,
-    lineHeight:33,
-    backgroundColor:'rgba(0,0,0,0)'
-  },
-  twist: {
-    fontFamily:'Helvetica-Bold',
-    fontSize: 13,
-    textAlign: 'left',
-    color: '#fff',
-    marginBottom:4,
-    backgroundColor:'rgba(0,0,0,0)'
-  },
-  text: {
-    fontFamily:'Helvetica',
-    fontSize: 10,
-    textAlign: 'left',
-    color: '#fff',
-    marginBottom: 5,
-    backgroundColor:'rgba(0,0,0,0)'
-  },
-  footer:{
-    bottom:0,
-    height:30,
-    backgroundColor:"#fff",
-    flexDirection:"row"
-  },
-  logo:{
-    justifyContent: 'center',
-    alignItems:"center",
-    paddingHorizontal:10
-  },
-  fItem:{
-    flex: 1,
-    justifyContent: 'center',
-    alignItems:"center",
-    paddingHorizontal:10
-  },
-  fImage:{
-    height:25,
-    resizeMode:"contain"
-  },
-  selected:{
-    backgroundColor:"#f57c00"
-  }
-});
-
-// AppRegistry.registerComponent('arvsrt', () => arvsrt);
