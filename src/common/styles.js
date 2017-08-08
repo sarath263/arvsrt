@@ -74,6 +74,16 @@ export const styles = StyleSheet.create({
   menuTop:{
     top:0
   },
-  menuHead:{height:55,backgroundColor:"#f57c00"},
+  menuHead:{
+    height:50,
+    backgroundColor:"#f57c00",
+    flexDirection:"row",
+    justifyContent:'space-between',
+    alignItems:"center",
+    alignContent:'space-between'
+  },
+  htext:{fontSize:10,color:"#fff"},
+  mImage:{height:19,marginHorizontal:3},
+  badge:{borderRadius:15,backgroundColor:"#fff",width:12.5,height:12.5,justifyContent: 'center',alignItems: 'flex-start',marginLeft:-8},
   menuBottom:{}
 });
